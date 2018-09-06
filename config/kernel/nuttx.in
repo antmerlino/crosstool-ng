@@ -1,0 +1,11 @@
+# NuttX config options
+
+config KERNEL_NUTTX_CONFIG
+    string
+    prompt "Configuration name used to configure NuttX"
+    default sim/nsh
+    help
+      The NuttX configuration to use after extracting NuttX to configure
+      kernel headers and libc functionality.
+
+source "config/versions/nuttx-apps.in"

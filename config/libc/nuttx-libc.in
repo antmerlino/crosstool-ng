@@ -1,0 +1,8 @@
+# nuttx-libc options
+
+## depends on KERNEL_NUTTX
+##
+## select LIBC_SUPPORT_THREADS_POSIX
+## select CC_CORE_PASSES_NEEDED
+##
+## help The NuttX Libc package provides the NuttX libc library.
