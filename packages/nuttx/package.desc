@@ -1,0 +1,5 @@
+repository='git git@bitbucket.org:nuttx/nuttx.git'
+mirrors='https://sourceforge.net/projects/nuttx/files/nuttx/nuttx-${CT_NUTTX_VERSION}'
+milestones='7.25'
+signature_format='unpacked/.sign'
+archive_formats='.tar.gz'
