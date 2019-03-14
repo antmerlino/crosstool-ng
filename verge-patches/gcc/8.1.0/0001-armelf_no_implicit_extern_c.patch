@@ -1,0 +1,24 @@
+From 6b977688517d768a1afdc279c99d7c2f28b988e5 Mon Sep 17 00:00:00 2001
+From: Anthony Merlino <anthony@vergeaero.com>
+Date: Mon, 3 Sep 2018 23:14:05 -0400
+Subject: [PATCH] Changes default arm/elf behavior to not wrap system headers
+ with EXTERN_C implicitly
+
+---
+ gcc/config/arm/elf.h | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/gcc/config/arm/elf.h b/gcc/config/arm/elf.h
+index f119b87116ff..0161b782f017 100644
+--- a/gcc/config/arm/elf.h
++++ b/gcc/config/arm/elf.h
+@@ -154,3 +154,6 @@
+ #undef L_floatundisf
+ #endif
+ 
++/* Don't automatically add extern "C" { } around header files. */
++#undef  NO_IMPLICIT_EXTERN_C
++#define NO_IMPLICIT_EXTERN_C 1
+-- 
+2.14.4
+
